@@ -5,8 +5,8 @@ public class PunchBehavior : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        int max = 6;
-        int rnd = Random.Range(0, 6);
+        int max = 5;
+        int rnd = Random.Range(0, max);
         animator.SetInteger(CustomStrings.PunchIndex, rnd);
 	}
 
