@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         gui = GameObject.FindGameObjectWithTag("GUI").GetComponent<GUIScript>();
         anim = this.GetComponent<Animator>();
-	}
+        gui.UpdateHealth(health);
+    }
 	
 	// Update is called once per frame
 	void Update () {

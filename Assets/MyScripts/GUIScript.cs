@@ -11,7 +11,7 @@ public class GUIScript : MonoBehaviour {
 
     public GameObject DeathPanel;
 
-    private bool isDead;
+    public bool isDead;
     private int kills;
     private int doubleClick;
 
@@ -63,8 +63,9 @@ public class GUIScript : MonoBehaviour {
 
     public void UpdateHealth(int n)
     {
-        if(n < 0)
+        if(n <= 0)
         {
+            isDead = true;
             n = 0;
         }
         Health.text = n.ToString();
